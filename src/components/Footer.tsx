@@ -18,7 +18,7 @@ export default async function Footer() {
             href="/"
             className="text-xl font-extrabold tracking-tighter text-slate-100 transition-colors duration-150 hover:text-yellow-400"
           >
-            {settings.data.name}
+            {"Vinayak Saindane"}
           </Link>
           <span
             className="hidden text-5xl font-extralight leading-[0] text-slate-400 sm:inline"
@@ -27,7 +27,7 @@ export default async function Footer() {
             /
           </span>
           <p className=" text-sm text-slate-300 ">
-            © {new Date().getFullYear()} {settings.data.name}
+            © {new Date().getFullYear()} {"Vinayak Saindane"}
           </p>
         </div>
         <nav className="navigation" aria-label="Footer Navigation">
@@ -57,33 +57,25 @@ export default async function Footer() {
           </ul>
         </nav>
         <div className="socials inline-flex justify-center sm:justify-end">
-          {isFilled.link(settings.data.github_link) && (
-            <PrismicNextLink
-              field={settings.data.github_link}
-              className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={settings.data.name + " on GitHub"}
-            >
-              <FaGithub />
-            </PrismicNextLink>
-          )}
-          {isFilled.link(settings.data.twitter_link) && (
-            <PrismicNextLink
-              field={settings.data.twitter_link}
-              className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={settings.data.name + " on Twitter"}
-            >
-              <FaTwitter />
-            </PrismicNextLink>
-          )}
-          {isFilled.link(settings.data.linkedin_link) && (
-            <PrismicNextLink
-              field={settings.data.linkedin_link}
-              className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
-              aria-label={settings.data.name + " on LinkedIn"}
-            >
-              <FaLinkedin />
-            </PrismicNextLink>
-          )}
+          <a
+            href="https://github.com/VinayakSaindane"
+            className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+            aria-label="Vinayak Saindane on GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
+          
+          <a
+            href="https://www.linkedin.com/in/vinayak-saindane/"
+            className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
+            aria-label="Vinayak Saindane on LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
         </div>
       </div>
     </Bounded>
